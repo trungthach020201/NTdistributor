@@ -1,0 +1,220 @@
+body {
+    margin: auto;
+    padding: 0px;
+    background: #CCCCCC;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 12px;
+}
+
+#homepage {
+    background-image: url(image/bg-body2.png);
+    margin: auto;
+    padding-top: 0%;
+    width: 900px;
+    height: auto;
+}
+
+.header {
+    height: 360px;
+    width: 900px;
+}
+
+#sear {
+    border-radius: 5px;
+    padding: 0px 25px;
+}
+
+#welcome {
+    background: rgb(187, 146, 13);
+    margin: 10px 0px 0px 0px;
+    padding: 8px;
+    vertical-align: middle;
+    border: dotted 2px rgb(204, 78, 0);
+    font-weight: bold;
+}
+
+.one {
+    width: 500px;
+    float: left;
+    box-sizing: border-box;
+    margin-top: 70px;
+    margin-left: 50px;
+}
+
+.two {
+    width: 350;
+    float: left;
+    box-sizing: border-box;
+    padding-left: 30px;
+    margin-top: 70px;
+}
+
+#slideshow {
+    overflow: hidden;
+    height: 360px;
+    width: 900px;
+    margin: 0 auto;
+}
+
+.slide-wrapper {
+    width: 2912px;
+    -webkit-animation: slide 14s ease infinite;
+}
+
+.slide {
+    float: left;
+    height: 360px;
+    width: 900px;
+}
+
+@-webkit-keyframes slide {
+    20% {
+        margin-left: 0px;
+    }
+    30% {
+        margin-left: -900px;
+    }
+    50% {
+        margin-left: -900px;
+    }
+    60% {
+        margin-left: -900px;
+    }
+    80% {
+        margin-left: -1800px;
+    }
+}
+
+.no-margin-top {
+    margin-top: 0;
+}
+
+.category-1 {
+    width: 400px;
+    float: left;
+    box-sizing: border-box;
+    margin-top: 30px;
+    margin-right: 1000px;
+    margin-left: 30px;
+}
+
+.category-2 {
+    width: 400px;
+    float: left;
+    box-sizing: border-box;
+    margin-top: 0px;
+    margin-right: 1000px;
+    margin-left: 30px;
+}
+
+.category-3 {
+    width: 400px;
+    float: left;
+    box-sizing: border-box;
+    margin-top: 0px;
+    margin-right: 1000px;
+    margin-left: 30px;
+}
+
+.icon-outer {
+    box-sizing: border-box;
+    float: left;
+    width: 200px;
+    height: 420px;
+    padding: 5px;
+    margin-left: 1px;
+    margin-right: 17px;
+}
+
+.icon-circle {
+    background-color: khaki;
+    color: #B4B4B4;
+    width: 200px;
+    height: 200px;
+    border-radius: 10px;
+    margin: 5px 0px 5px 0px;
+    border: 2px solid #D6D6D6;
+    box-sizing: border-box;
+    font-size: 75pt;
+    padding: 10px 0 0 0;
+    cursor: pointer;
+}
+
+.icon-circle:hover {
+    color: #FFFFFF;
+    background: #c2d2bc;
+}
+
+.btn1 {
+    width: 160px;
+    border-radius: 10px;
+}
+
+h5 {
+    margin: 15px 0 10px 0;
+    font-size: 20pt;
+}
+
+#footer {
+    height: 100px;
+    border-top: dashed 1px #ccc;
+}
+
+#footer .footerleft {
+    float: left;
+    width: 60px;
+    height: 90px;
+    margin: 10px 0px 10px 10px;
+}
+
+#footer .left {
+    float: left;
+    width: 500px;
+    margin: 10px 0px 10px 20px;
+    color: #666666;
+}
+
+#footer .right {
+    float: left;
+    margin-left: 25px;
+}
+
+.col-sm-10 {
+    padding-left: 10px;
+}
+
+
+/*login*/
+
+.row {
+    height: 250px;
+    width: 600px;
+}
+
+
+/* register*/
+
+.container {
+    margin-top: 30px;
+}
+
+.col-sm-2 {
+    display: inline;
+    margin-top: 10px;
+}
+
+.form-group {
+    width: 500px;
+    margin-left: 230px;
+}
+
+.input-group-btn {
+    margin-top: 2px;
+}
+
+.col-sm-offset-2 {
+    margin-top: 20px;
+}
+
+
+/* réopnsive */
