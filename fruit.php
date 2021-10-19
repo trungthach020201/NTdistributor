@@ -26,14 +26,14 @@
             </div>
                            <?php
 						  include_once("connection.php");
-		  				   	$result = pg_query($conn, "SELECT * FROM product where ifcate='F01'");
+		  				   	$result = pg_query($conn, "SELECT * FROM public.product where idcate='F01'");
 			
 			                if (!$result) { //add this check.
                                 die('Invalid query: ' . pg_error($conn));
                             }
 		
 			            
-			                while($row = pg_fetch_array($result, PGSQL_ASSOC)){
+			                while($row = pg_fetch_array($result,NULL, PGSQL_ASSOC)){
 				            ?>
   
             <div class="icon-outer">
