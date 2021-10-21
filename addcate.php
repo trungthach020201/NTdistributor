@@ -34,11 +34,11 @@
 			echo "<ul>$err</ul>";
 		}
 		else{
-			$sq="SELECT * FROM category where IDCate='$id' or NameCate='$name'";
-			$result = mysqli_query($conn,$sq) or die(mysqli_error($conn));
-			if(mysqli_num_rows($result)==0)
+			$sq="SELECT * FROM public.category where idcate='$id' or namecate='$name'";
+			$result = pg_query($conn,$sq) or die(pg_error($conn));
+			if(pg_num_rows($result)==0)
 			{
-				mysqli_query($conn,"INSERT INTO category(IDCate,NameCate,DesCate) VALUES ('$id','$name','$des')");
+				pg_query($conn,"INSERT INTO category(idcate,namecate,descate) VALUES ('$id','$name','$des')");
 				echo '<meta http-equiv="refresh" content="0;URL=?page=cate"/>';
 			}
 			else

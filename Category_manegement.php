@@ -45,7 +45,7 @@
                 if(isset($_GET["id"]))
                     {
                         $id = $_GET["id"];
-                        mysqli_query($conn, "DELETE FROM category WHERE IDCate='$id'");
+                        pg_query($conn, "DELETE FROM category WHERE idcate='$id'");
                     }
             }
         ?>
@@ -70,21 +70,21 @@
         
                 <?php
                 $No = 1;
-                $result = mysqli_query($conn, "SELECT * FROM category");
-                while($row = mysqli_fetch_array($result, MYSQLI_ASSOC))
+                $result = pg_query($conn, "SELECT * FROM public.category");
+                while($row = pg_fetch_array($result, PGSQL_ASSOC))
                 {
                 ?>   
 			<tr>
               <td class="cotCheckBox"><?php echo $No; ?></td>
-              <td><?php echo $row["NameCate"]; ?></td>
-              <td><?php echo $row["DesCate"]; ?></td>
+              <td><?php echo $row["namecate"]; ?></td>
+              <td><?php echo $row["descate"]; ?></td>
               <td style='text-align:center'> 
-                    <a href="?page=updatecate&&id=<?php echo $row['IDCate']; ?>">
+                    <a href="?page=updatecate&&id=<?php echo $row['idcate']; ?>">
                     <img src='image/edit.png' border='0'  />
                     </a>
                 </td>
               <td style = 'text-align:center'>
-                    <a href="?page=cate&&function=del&&id=<?php echo $row["IDCate"]; ?>" onclick="return deleteConfirm()">
+                    <a href="?page=cate&&function=del&&id=<?php echo $row["idcate"]; ?>" onclick="return deleteConfirm()">
                         <img src='image/delete.png' border='0'/>
                     </a>
               </td>
@@ -115,12 +115,12 @@
                     if (isset($_GET["function"]) == "delproduct") {
                         if (isset($_GET["id"])) {
                         $id = $_GET["id"];
-                        $sq = "SELECT productImage from product WHERE productID='$id'";
-                        $res = mysqli_query($conn, $sq);
-                        $row = mysqli_fetch_array($res, MYSQLI_ASSOC);
-                        $filePic = $row['productImage'];
+                        $sq = "SELECT productimage from product WHERE productid='$id'";
+                        $res = pg_query($conn, $sq);
+                        $row = pg_fetch_array($res, NULL,PGSQL_ASSOC);
+                        $filePic = $row['productimage'];
                         unlink("image/".$filePic);
-                        mysqli_query($conn, "DELETE FROM product WHERE productID='$id'");
+                        mysqli_query($conn, "DELETE FROM product WHERE productid='$id'");
                         }
                     }
                 ?>
@@ -146,21 +146,21 @@
                 <tbody>
                 <?php
                     $No = 1;
-                    $result = mysqli_query($conn, "SELECT productID, productName, price, productImage, NameCate FROM product a, category b
-                            WHERE a.IDCate = b.IDCate ORDER BY price DESC");
-                    while ($row = mysqli_fetch_array($result, MYSQLI_ASSOC)) {
+                    $result = pg_query($conn, "SELECT productid, productname, price, productimage, namecate FROM product a, category b
+                            WHERE a.idcate = b.idcate ORDER BY price DESC");
+                    while ($row = pg_fetch_array($result, MYSQLI_ASSOC)) {
                 ?>
                     <tr>
                         <td><?php echo $No; ?></td>
-                        <td><?php echo $row["productID"]; ?></td>
-                        <td><?php echo $row["productName"]; ?></td>
+                        <td><?php echo $row["productid"]; ?></td>
+                        <td><?php echo $row["productname"]; ?></td>
                         <td><?php echo $row["price"]; ?></td>
-                        <td><?php echo $row["NameCate"]; ?></td>
+                        <td><?php echo $row["Namecate"]; ?></td>
                         <td align='center' class='cotNutChucNang'>
-                        <img src='image/<?php echo $row['productImage'] ?>' border='0' width="50" height="50" />
+                        <img src='image/<?php echo $row['productimage'] ?>' border='0' width="50" height="50" />
                         </td>
-                        <td align='center' class='cotNutChucNang'><a href="?page=updateprod&&id=<?php echo $row["productID"]; ?>"><img src='image/edit.png' border='0' width="30" height="30" /></a></td>
-                        <td align='center' class='cotNutChucNang'><a href="?page=cate&&function=delproduct&&id=<?php echo $row["productID"]; ?>" onclick="return deleteConfirm()"><img src='image/delete.png' border='0' width="30" height="30" /></a></td>
+                        <td align='center' class='cotNutChucNang'><a href="?page=updateprod&&id=<?php echo $row["productid"]; ?>"><img src='image/edit.png' border='0' width="30" height="30" /></a></td>
+                        <td align='center' class='cotNutChucNang'><a href="?page=cate&&function=delproduct&&id=<?php echo $row["productid"]; ?>" onclick="return deleteConfirm()"><img src='image/delete.png' border='0' width="30" height="30" /></a></td>
                     </tr>
                     <?php 
                     $No++;

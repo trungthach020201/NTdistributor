@@ -20,11 +20,11 @@
 	function blind_Category_List($conn)
 	{
 		$sqlstring = "SELECT IDCate, NameCate from category";
-		$result = mysqli_query($conn, $sqlstring);
+		$result = pg_query($conn, $sqlstring);
 		echo "<select name='CategoryList' class='form-control'>
 		<option value='0'>Choose category</option>";
-		while ($row = mysqli_fetch_array($result, MYSQLI_ASSOC)) {
-			echo "<option value = '" . $row['IDCate'] . "'>" . $row['NameCate'] . "</option>";
+		while ($row = pg_fetch_array($result,NULL ,PGSQL_ASSOC)) {
+			echo "<option value = '" . $row['idcate'] . "'>" . $row['namecate'] . "</option>";
 		}
 		echo "</select>";
 	}
@@ -52,14 +52,14 @@
 		} else {
 			if ($pic['type'] == "image/jpg"  || $pic['type'] == "image/jpeg" || $pic['type'] == "image/png" || $pic['type'] == "image/gif") {
 				if ($pic['size'] <= 6144000) {
-					$sq = "SELECT * from product where productID='$id' or productName='$proname'";
-					$result = mysqli_query($conn, $sq);
-					if (mysqli_num_rows($result) == 0) {
+					$sq = "SELECT * from public.product where productid='$id' or productname='$proname'";
+					$result = pg_query($conn, $sq);
+					if (pg_num_rows($result) == 0) {
 						copy($pic['tmp_name'], "./image/" . $pic['name']);
 						$_filePic = $pic['name'];
-						$sqlstring = "INSERT INTO product (IDCate, productID, productName, price, productImage) 
+						$sqlstring = "INSERT INTO product (idcate, productid, productname, price, productimage) 
 						VALUES ('$category','$id','$proname','$price','$_filePic')";
-						mysqli_query($conn, $sqlstring);
+						pg_query($conn, $sqlstring);
 						echo '<meta http-equiv="refresh" content="0;URL=?page=cate"/>';
 					} else {
 						echo "<li>duplicate product</li>";
