@@ -41,14 +41,14 @@
             </div>
                            <?php
 						  include_once("connection.php");
-		  				   	$result = mysqli_query($conn, "SELECT * FROM product where IDCate='F01'");
+		  				   	$result = pg_query($conn, "SELECT * FROM publuc.product where idcate='F01'");
 			
 			                if (!$result) { //add this check.
-                                die('Invalid query: ' . mysqli_error($conn));
+                                die('Invalid query: ' . pg_error($conn));
                             }
 		
 			            
-			                while($row = mysqli_fetch_array($result, MYSQLI_ASSOC)){
+			                while($row = pg_fetch_array($result,NULL, PGSQL_ASSOC)){
 				            ?>
   
             <div class="icon-outer">
@@ -72,14 +72,14 @@
             </div>
                            <?php
 						  include_once("connection.php");
-		  				   	$result = mysqli_query($conn, "SELECT * FROM product where IDCate='V01'");
+		  				   	$result = pg_query($conn, "SELECT * FROM publuc.product where idcate='V01'");
 			
 			                if (!$result) { //add this check.
-                                die('Invalid query: ' . mysqli_error($conn));
+                                die('Invalid query: ' . pg_error($conn));
                             }
 		
 			            
-			                while($row = mysqli_fetch_array($result, MYSQLI_ASSOC)){
+			                while($row = pg_fetch_array($result,NULL, PGSQL_ASSOC)){
 				            ?>
   
             <div class="icon-outer">
@@ -107,14 +107,14 @@
             </div>
                            <?php
 						  include_once("connection.php");
-		  				   	$result = mysqli_query($conn, "SELECT * FROM product where IDCate='T01'");
+		  				   	$result = pg_query($conn, "SELECT * FROM public.product where idcate='T01'");
 			
 			                if (!$result) { //add this check.
-                                die('Invalid query: ' . mysqli_error($conn));
+                                die('Invalid query: ' . pg_error($conn));
                             }
 		
 			            
-			                while($row = mysqli_fetch_array($result, MYSQLI_ASSOC)){
+			                while($row = pg_fetch_array($result, MYSQLI_ASSOC)){
 				            ?>
   
             <div class="icon-outer">
