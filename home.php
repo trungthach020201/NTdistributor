@@ -108,7 +108,7 @@
                             }
 		
 			            
-			                while($row = pg_fetch_array($result, MYSQLI_ASSOC)){
+			                while($row = pg_fetch_array($result,NULL ,PGSQL_ASSOC)){
 				            ?>
   
             <div class="icon-outer">
