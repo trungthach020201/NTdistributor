@@ -71,7 +71,7 @@
                 <?php
                 $No = 1;
                 $result = pg_query($conn, "SELECT * FROM public.category");
-                while($row = pg_fetch_array($result, PGSQL_ASSOC))
+                while($row = pg_fetch_array($result,NULL ,PGSQL_ASSOC))
                 {
                 ?>   
 			<tr>
@@ -148,7 +148,7 @@
                     $No = 1;
                     $result = pg_query($conn, "SELECT productid, productname, price, productimage, namecate FROM product a, category b
                             WHERE a.idcate = b.idcate ORDER BY price DESC");
-                    while ($row = pg_fetch_array($result, MYSQLI_ASSOC)) {
+                    while ($row = pg_fetch_array($result,NULL,PGSQL_ASSOC)) {
                 ?>
                     <tr>
                         <td><?php echo $No; ?></td>
