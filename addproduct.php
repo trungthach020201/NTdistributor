@@ -19,7 +19,7 @@
 	include_once("connection.php");
 	function blind_Category_List($conn)
 	{
-		$sqlstring = "SELECT IDCate, NameCate from category";
+		$sqlstring = "SELECT idcate, namecate from category";
 		$result = pg_query($conn, $sqlstring);
 		echo "<select name='CategoryList' class='form-control'>
 		<option value='0'>Choose category</option>";
