@@ -29,8 +29,8 @@
 						  include_once("connection.php");
 		  				   	$result = pg_query($conn, "SELECT * FROM public.product where idcate='T01'");
 			
-// 			                if (!$result) { //add this check.
-//                                 die('Invalid query: ' . pg_error($conn));
+			                if (!$result) { //add this check.
+                                die('Invalid query: ' . pg_error($conn));
                             }
 		
 			            
