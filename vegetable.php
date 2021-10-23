@@ -27,21 +27,21 @@
             </div>
                            <?php
 						  include_once("connection.php");
-		  				   	$result = mysqli_query($conn, "SELECT * FROM product where IDCate='V01'");
+		  				   	$result = pg_query($conn, "SELECT * FROM public.product where idcate='V01'");
 			
-			                if (!$result) { //add this check.
-                                die('Invalid query: ' . mysqli_error($conn));
+// 			                if (!$result) { //add this check.
+//                                 die('Invalid query: ' . mysqli_error($conn));
                             }
 		
 			            
-			                while($row = mysqli_fetch_array($result, MYSQLI_ASSOC)){
+			                while($row = mysqli_fetch_array($result, NULL,PGSQL_ASSOC)){
 				            ?>
   
             <div class="icon-outer">
                 <div class="icon-circle" align="center">
-                <img src="image/<?php echo $row['productImage']?>" width="150" height="150">
+                <img src="image/<?php echo $row['productimage']?>" width="150" height="150">
                 </div>
-                <h5><a><?php echo  $row['productName']?></a></h5>
+                <h5><a><?php echo  $row['productname']?></a></h5>
                 <p><a>price: <?php echo  $row['price']?> VND/kg</a></p>
                 <button class="btn1 btn-primary">Add to cart</button>
             </div>
