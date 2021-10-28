@@ -55,11 +55,11 @@
     } else {
         include_once("connection.php");
         $pass = md5 ($pass1);
-        $sq = "SELECT * FROM account WHERE username='$us' OR email='$email'";
+        $sq = "SELECT * FROM public.account WHERE username='$us' OR email='$email'";
         $res = pg_query($conn,$sq);
         If(pg_num_rows($res)==0)
         {
-            pg_query($conn,"INSERT INTO account(username,password,cusname,gender,address,telephone,
+            pg_query($conn,"INSERT INTO public.account(username,password,cusname,gender,address,telephone,
             email,cusdate,cusmonth,cusyear,ssn,activecode,state)
             VALUE('$us','$pass','$fullname','$sex','$address','$tel','$email',
             $date,$month,$year,'','',0)") or die(pg_error($conn));
