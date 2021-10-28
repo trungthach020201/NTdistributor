@@ -19,7 +19,7 @@
 //Get custmer information
 $query = "SELECT cusname, address, email, telephone from public.account
 			where username = '" . $_SESSION["us"] . "'";
-$result = pg_query($conn, $query) or die(mysqli_error($conn));
+$result = pg_query($conn, $query) or die(pg_error($conn));
 $row = pg_fetch_array($result,NULL, PGSQL_ASSOC);
 
 $us = $_SESSION["us"];

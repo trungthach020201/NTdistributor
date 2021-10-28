@@ -19,17 +19,17 @@
     <?php
 	include_once("connection.php");
 	Function bind_Category_List($conn,$selectedValue){
-		$sqlstring="SELECT IDCate, NameCate FROM category";
-		$result = mysqli_query($conn, $sqlstring);
+		$sqlstring="SELECT idcate, namecate FROM public.category";
+		$result = pg_query($conn, $sqlstring);
 		echo "<select name='CategoryList' class='form-control'>
 			<option value='0'>Chose category</option>";
-			while ($row = mysqli_fetch_array($result, MYSQLI_ASSOC)){
-				if($row['IDCate'] == $selectedValue)
+			while ($row = pg_fetch_array($result,NULL ,PGSQL_ASSOC)){
+				if($row['idcate'] == $selectedValue)
 				{
-					echo "<option value='".$row['IDCate']."' selected>".$row['NameCate']."</option>";
+					echo "<option value='".$row['idcate']."' selected>".$row['namecate']."</option>";
 				}
 				else{
-					echo "<option value='".$row['IDCate']."'>".$row['NameCate']."</option>";
+					echo "<option value='".$row['idcate']."'>".$row['namecate']."</option>";
 				}
 			}
 		echo "</select>";
@@ -37,16 +37,16 @@
 	if(isset($_GET["id"]))
 	{
 		$id= $_GET["id"];
-		$sqlstring = "SELECT productName, price, productImage, IDCate
-		FROM product WHERE productID = '$id' ";
+		$sqlstring = "SELECT productname, price, productimage, idcate
+		FROM public.product WHERE productid = '$id' ";
 
-		$result = mysqli_query($conn, $sqlstring);
-		$row = mysqli_fetch_array($result, MYSQLI_ASSOC);
+		$result = pg_query($conn, $sqlstring);
+		$row = pg_fetch_array($result,NULL ,PGSQL_ASSOC);
 		
-		$proname =$row["productName"];
+		$proname =$row["productname"];
 		$price=$row['price'];
-		$pic =$row['productImage'];
-		$category= $row['IDCate'];
+		$pic =$row['productimage'];
+		$category= $row['idcate'];
     ?>
                 <div class="container">
                     <h2 >Updating Product</h2>
@@ -136,16 +136,16 @@
 				{
 					if($pic['size']<= 614400)
 					{
-						$sq="SELECT * FROM product WHERE productID != '$id' and productName='$proname'";
-						$result=mysqli_query($conn,$sq);
-						if(mysqli_num_rows($result)==0)
+						$sq="SELECT * FROM public.product WHERE productid != '$id' and productname='$proname'";
+						$result=pg_query($conn,$sq);
+						if(pg_num_rows($result)==0)
 						{
 						copy($pic['tmp_name'], "image/".$pic['name']);
 						$filePic = $pic['name'];
 
-						$sqlstring="UPDATE product SET productName='$proname', price=$price, 
-						productImage='$filePic',IDCate='$category' WHERE productID='$id'";
-						mysqli_query($conn,$sqlstring);
+						$sqlstring="UPDATE product SET productname='$proname', price=$price, 
+						productimage='$filePic',idcate='$category' WHERE productid='$id'";
+						pg_query($conn,$sqlstring);
 						echo '<meta http-equiv="refresh" content="0;URL=?page=cate"/>';
 						}
 						else 
@@ -155,7 +155,7 @@
 					}
 					else 
 					{
-						echo "Size of image to big";
+						echo "Size of image too big";
 					}	
 				}
 				else 
@@ -165,14 +165,14 @@
 			}
 			else
 			{
-				$sq="SELECT * FROM product where productID != '$id' and productName='$proname'";
-				$result= mysqli_query($conn,$sq);
-				if(mysqli_num_rows($result)==0)
+				$sq="SELECT * FROM public.product where productid != '$id' and productname='$proname'";
+				$result= pg_query($conn,$sq);
+				if(pg_num_rows($result)==0)
 				{
-					$sqlstring="UPDATE product SET productName='$proname',
-					Price=$price, IDCate='$category' WHERE productID='$id'";
+					$sqlstring="UPDATE product SET productname='$proname',
+					price=$price, idcate='$category' WHERE productid='$id'";
 
-					mysqli_query($conn,$sqlstring);
+					pg_query($conn,$sqlstring);
 					echo '<meta http-equiv="refresh" content="0;URL=?page=cate"/>';
 				}
 				else 

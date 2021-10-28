@@ -21,11 +21,11 @@
 		if(isset($_GET["id"]))
 			{
 				$id = $_GET["id"];
-				$result = mysqli_query($conn,"SELECT*FROM category WHERE IDCate='$id'");
-				$row = mysqli_fetch_array($result,MYSQLI_ASSOC);
-				$cat_id = $row['IDCate'];
-				$cat_name = $row['NameCate'];
-				$cat_des = $row['DesCate'];
+				$result = pg_query($conn,"SELECT*FROM public.category WHERE idcate='$id'");
+				$row = pg_fetch_array($result,NULL,PGSQL_ASSOC);
+				$cat_id = $row['idcate'];
+				$cat_name = $row['namecate'];
+				$cat_des = $row['descate'];
 	?>
 <!--form update -->
         <div class="container">
@@ -87,11 +87,11 @@
         }
         else
         {
-             $sq="SELECT * FROM category where IDCate != '$id' and NameCate ='$name'";
-             $result =  mysqli_query($conn,$sq);
-             if(mysqli_num_rows($result)==0)
+             $sq="SELECT * FROM public.category where idcate != '$id' and namecate ='$name'";
+             $result =  pg_query($conn,$sq);
+             if(pg_num_rows($result)==0)
              {
-                 mysqli_query($conn,"UPDATE category SET NameCate = '$name', DesCate ='$des' WHERE IDCate ='$id'");
+                 pg_query($conn,"UPDATE category SET namecate = '$name', descate ='$des' WHERE idcate ='$id'");
                  echo '<meta http-equiv="refresh" content ="0;URL=?page=cate"/>';
              }
              else
