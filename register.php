@@ -55,14 +55,14 @@
     } else {
         include_once("connection.php");
         $pass = md5 ($pass1);
-        $sq = "SELECT * FROM account WHERE Username='$us' OR email='$email'";
-        $res = mysqli_query($conn,$sq);
-        If(mysqli_num_rows($res)==0)
+        $sq = "SELECT * FROM account WHERE username='$us' OR email='$email'";
+        $res = pg_query($conn,$sq);
+        If(pg_num_rows($res)==0)
         {
-            mysqli_query($conn,"INSERT INTO account(Username,Password,Cusname,Gender,Address,Telephone,
-            Email,Cusdate,Cusmonth,Cusyear,SSN,Activecode,State)
+            pg_query($conn,"INSERT INTO account(username,password,cusname,gender,address,telephone,
+            email,cusdate,cusmonth,cusyear,ssn,activecode,state)
             VALUE('$us','$pass','$fullname','$sex','$address','$tel','$email',
-            $date,$month,$year,'','',0)") or die(mysqli_error($conn));
+            $date,$month,$year,'','',0)") or die(pg_error($conn));
             echo '<meta http-equiv="refresh" content="0;URL=?page=login"/>';
         }
         else{
