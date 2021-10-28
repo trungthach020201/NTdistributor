@@ -17,16 +17,16 @@
 <br>   
 <?php
 //Get custmer information
-$query = "SELECT CusName, Address, Email, Telephone from account
-			where Username = '" . $_SESSION["us"] . "'";
-$result = mysqli_query($conn, $query) or die(mysqli_error($conn));
-$row = mysqli_fetch_array($result, MYSQLI_ASSOC);
+$query = "SELECT cusname, address, email, telephone from public.account
+			where username = '" . $_SESSION["us"] . "'";
+$result = pg_query($conn, $query) or die(mysqli_error($conn));
+$row = pg_fetch_array($result,NULL, PGSQL_ASSOC);
 
 $us = $_SESSION["us"];
-$email = $row["Email"];
-$fullname = $row["CusName"];
-$address = $row["Address"];
-$telephone = $row["Telephone"];
+$email = $row["email"];
+$fullname = $row["cusname"];
+$address = $row["address"];
+$telephone = $row["telephone"];
 
 //Update information when the user presses the "Update" button
 if (isset($_POST['btnUpdate'])) {
@@ -39,15 +39,15 @@ if (isset($_POST['btnUpdate'])) {
 		if ($_POST['txtPass1'] != "") {
 			$pass = md5($_POST['txtPass1']);
 
-			$sq = "UPDATE account set CusName='$fullname', Address = '$address',
-			Telephone='$telephone', Password='$pass' WHERE Username='" . $_SESSION['us'] . "'";
+			$sq = "UPDATE account set cusname='$fullname', address = '$address',
+			telephone='$telephone', password='$pass' WHERE username='" . $_SESSION['us'] . "'";
 
-			mysqli_query($conn, $sq) or die(mysqli_error($conn));
+			pg_query($conn, $sq) or die(pg_error($conn));
 		} else {
-			$sq = "UPDATE account set CusName='$fullname', Address = '$address',
-			Telephone='$telephone' where Username='" . $_SESSION['us'] . "'";
+			$sq = "UPDATE account set cusname='$fullname', address = '$address',
+			telephone='$telephone' where username='" . $_SESSION['us'] . "'";
 
-			mysqli_query($conn, $sq) or die(mysqli_error($conn));
+			pg_query($conn, $sq) or die(pg_error($conn));
 		}
 		echo '<meta http-equiv="refresh" content="0;URL=index.php"/>';
 	} else {
