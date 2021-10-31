@@ -120,7 +120,7 @@
                         $row = pg_fetch_array($res, NULL,PGSQL_ASSOC);
                         $filePic = $row['productimage'];
                         unlink("image/".$filePic);
-                        mysqli_query($conn, "DELETE FROM product WHERE productid='$id'");
+                        pg_query($conn, "DELETE FROM product WHERE productid='$id'");
                         }
                     }
                 ?>
