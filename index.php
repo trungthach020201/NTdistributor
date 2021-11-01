@@ -28,9 +28,9 @@
             <!--slideshow-->
             <div id="slideshow">
                 <div class="slide-wrapper">
-                    <div class="slide"><img src="image/hsahg.jpg"></div>
-                    <div class="slide"><img src="image/header.jpeg"></div>
-                    <div class="slide"><img src="image/header2.jpeg"></div>
+                    <div class="slide"><img src="image/head1.png"></div>
+                    <div class="slide"><img src="image/head2.png"></div>
+                    <div class="slide"><img src="image/head3.png"></div>
                 </div>
             </div>
 
