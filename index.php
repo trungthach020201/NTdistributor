@@ -21,7 +21,7 @@
       <div id="homepage">
         <header id="header">
             <div id="welcome">
-                <marquee direction="left" behavior="scroll" scrollamount="8">
+                <marquee direction="left" behavior="scroll" scrollamount="6">
                     Welcome to the website of ATN selling toy company - the best selling toys of domestic and foreign in Vietnam.
                 </marquee>
             </div>
