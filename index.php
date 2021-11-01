@@ -28,9 +28,9 @@
             <!--slideshow-->
             <div id="slideshow">
                 <div class="slide-wrapper">
-                    <div class="slide"><img src="image/head1.png" width ="1000px" height="600px"></div>
-                    <div class="slide"><img src="image/head2.png" width ="1000px" height="600px"></div>
-                    <div class="slide"><img src="image/head3.png" width ="1000px" height="600px"></div>
+                    <div class="slide"><img src="image/head1.png" width ="1000px" height="800px"></div>
+                    <div class="slide"><img src="image/head2.png" width ="1000px" height="1000px"></div>
+                    <div class="slide"><img src="image/head3.png" width ="1000px" height="800px"></div>
                 </div>
             </div>
 
