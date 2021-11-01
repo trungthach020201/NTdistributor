@@ -114,8 +114,11 @@
                 <?php
                 }
                 ?>
-                        <!-- about us-->
-        <div class="normal-wrapper">
+      
+
+        </div>
+                          <!-- about us-->
+                          <div class="normal-wrapper">
             <div class="one">
                 <h1 class="no-margin-top"><b>|</b> About Us</h1>
                 <p>NTdistributor is a company specializes in supplying all kinds of agricultural products at dosmetic and foreign with the most competitive prices, We have all items. The company was established in August 1990 under the direction of    Mr. SARAM.</p>
@@ -127,8 +130,6 @@
                     <b>Address:</b> Kho Dau street, Tra Vinh City.<br>
                 </p>
             </div>
-        </div>
-
         </div>
     </div>
     </body>
