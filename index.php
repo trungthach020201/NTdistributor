@@ -67,11 +67,11 @@
                     <a class="nav-link" href="?page=cate">Manegement category</a>
                     </li>
                 </div>
-                <!-- <div id="sear">
+                <div id="sear">
                     <li class="nav-item">
                     <a class="nav-link" href="?page=addtocart">Manage account</a>
                     </li>
-               </div> -->
+               </div>
         <div>
                <?php
                
