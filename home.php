@@ -37,7 +37,7 @@
                         <div class="product-carousel"> 
                         <div class="normal-wrapper">
             <div class="category-1">
-                <h1 class="no-margin-top"><b>|</b> Fruits</h1>
+                <h1 class="no-margin-top"><b>|</b> Baby boy's Toys</h1>
             </div>
                            <?php
 						  include_once("connection.php");
@@ -66,7 +66,7 @@
             <!-- vegetable area -->
                         <div class="normal-wrapper">
             <div class="category-1">
-                <h1 class="no-margin-top"><b>|</b> Vegetable</h1>
+                <h1 class="no-margin-top"><b>|</b> Baby girl's Toys</h1>
             </div>
                            <?php
 						  include_once("connection.php");
@@ -102,7 +102,7 @@
             <!-- tubers-->
         <div class="normal-wrapper">
             <div class="category-1">
-                <h1 class="no-margin-top"><b>|</b> Tubers</h1>
+                <h1 class="no-margin-top"><b>|</b> Unisex Toys</h1>
             </div>
                            <?php
 						  include_once("connection.php");
