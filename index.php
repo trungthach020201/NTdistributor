@@ -49,12 +49,12 @@
                </div>
                <div id="sear">
                     <li class="nav-item">
-                    <a class="nav-link" href="?page=fruit">Baby Boy toys</a>
+                    <a class="nav-link" href="?page=fruit">Manage store</a>
                     </li>
                </div>
                <div id="sear">
                     <li class="nav-item">
-                    <a class="nav-link" href="?page=vegetable">Baby girl toys</a>
+                    <a class="nav-link" href="?page=vegetable">Manage product</a>
                     </li>
                </div>
                <!-- <div id="sear">
@@ -64,9 +64,14 @@
                </div> -->
                <div id="sear">
                     <li class="nav-item">
-                    <a class="nav-link" href="?page=cate">Manegement category&products</a>
+                    <a class="nav-link" href="?page=cate">Manegement category</a>
                     </li>
                 </div>
+                <div id="sear">
+                    <li class="nav-item">
+                    <a class="nav-link" href="?page=addtocart">Manage account</a>
+                    </li>
+               </div>
         <div>
                <?php
                
@@ -89,11 +94,7 @@
             }
             ?>
         </div>
-        <div id="sear">
-                    <li class="nav-item">
-                    <a class="nav-link" href="?page=addtocart">View cart</a>
-                    </li>
-               </div>
+    
             </ul>
          
     </nav>

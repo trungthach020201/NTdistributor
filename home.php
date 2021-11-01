@@ -9,27 +9,14 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
     <link rel="stylesheet" href="css/font-awesome.min.css">
     <link rel="stylesheet" href="responsive.css">
-    <title>NTdisbutor</title>
+    <title>ATN shop</title>
     <script src="js/jquery-3.2.0.min.js"></script>
     <script src="js/jquery.dataTables.min.js"></script>
     <script src="js/dataTables.bootstrap.min.js"></script>
     
   </head>
     <body>
-        <!-- about us-->
-        <div class="normal-wrapper">
-            <div class="one">
-                <h1 class="no-margin-top"><b>|</b> About Us</h1>
-                <p>NTdistributor is a company specializes in supplying all kinds of agricultural products at dosmetic and foreign with the most competitive prices, We have all items. The company was established in August 1990 under the direction of    Mr. SARAM.</p>
-            </div>
-            <div class="two" >
-            <h1 class="no-margin-top"><b>|</b>Contact</h1>
-                <p> <b>Hotline:</b> 0865894853 <br>
-                    <b>Email:</b> trungtngcc19009@fpt.edu.vn <br>
-                    <b>Address:</b> Kho Dau street, Tra Vinh City.<br>
-                </p>
-            </div>
-        </div>
+
         <!--fruit area -->
         <div class="container">
                 <div class="col-md-12">
@@ -127,6 +114,20 @@
                 <?php
                 }
                 ?>
+                        <!-- about us-->
+        <div class="normal-wrapper">
+            <div class="one">
+                <h1 class="no-margin-top"><b>|</b> About Us</h1>
+                <p>NTdistributor is a company specializes in supplying all kinds of agricultural products at dosmetic and foreign with the most competitive prices, We have all items. The company was established in August 1990 under the direction of    Mr. SARAM.</p>
+            </div>
+            <div class="two" >
+            <h1 class="no-margin-top"><b>|</b>Contact</h1>
+                <p> <b>Hotline:</b> 0865894853 <br>
+                    <b>Email:</b> trungtngcc19009@fpt.edu.vn <br>
+                    <b>Address:</b> Kho Dau street, Tra Vinh City.<br>
+                </p>
+            </div>
+        </div>
 
         </div>
     </div>
