@@ -29,8 +29,8 @@
             <div id="slideshow">
                 <div class="slide-wrapper">
                     <div class="slide"><img src="image/head2.png" width ="900px" height="560px"></div>
-                    <div class="slide"><img src="image/head1.png" width ="900px" height="560px"></div>
-                    <div class="slide"><img src="image/head3.png" width ="900px" height="560px"></div>
+                    <div class="slide"><img src="image/head1.png" width ="900px" height="580px"></div>
+                    <div class="slide"><img src="image/head3.png" width ="900px" height="600px"></div>
                 </div>
             </div>
 
