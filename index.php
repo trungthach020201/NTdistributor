@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="dinhdang1.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
-    <title>NTdisbutor</title>
+    <title>ATN shop</title>
     <script src="js/jquery-3.2.0.min.js"></script>
     <script src="js/jquery.dataTables.min.js"></script>
     <script src="js/dataTables.bootstrap.min.js"></script>
@@ -21,16 +21,16 @@
       <div id="homepage">
         <header id="header">
             <div id="welcome">
-                <marquee direction="left" behavior="scroll" scrollamount="6">
-                    Welcome to the website of NT distributor - the best distributor of domestic and foreign agricultural products in Vietnam.
+                <marquee direction="left" behavior="scroll" scrollamount="8">
+                    Welcome to the website of ATN selling toy company - the best selling toys of domestic and foreign in Vietnam.
                 </marquee>
             </div>
             <!--slideshow-->
             <div id="slideshow">
                 <div class="slide-wrapper">
                     <div class="slide"><img src="image/head2.png" width ="900px" height="560px"></div>
-                    <div class="slide"><img src="image/head1.png" width ="900px" height="580px"></div>
-                    <div class="slide"><img src="image/head3.png" width ="900px" height="600px"></div>
+                    <div class="slide"><img src="image/head1.png" width ="900px" height="590px"></div>
+                    <div class="slide"><img src="image/head3.png" width ="900px" height="620px"></div>
                 </div>
             </div>
 
@@ -49,19 +49,19 @@
                </div>
                <div id="sear">
                     <li class="nav-item">
-                    <a class="nav-link" href="?page=fruit">Fruit</a>
+                    <a class="nav-link" href="?page=fruit">Baby Boy toys</a>
                     </li>
                </div>
                <div id="sear">
                     <li class="nav-item">
-                    <a class="nav-link" href="?page=vegetable">Vegatable</a>
+                    <a class="nav-link" href="?page=vegetable">Baby girl toys</a>
                     </li>
                </div>
-               <div id="sear">
+               <!-- <div id="sear">
                     <li class="nav-item">
                     <a class="nav-link" href="?page=tubers">Tubers</a>
                     </li>
-               </div>
+               </div> -->
                <div id="sear">
                     <li class="nav-item">
                     <a class="nav-link" href="?page=cate">Manegement category&products</a>
