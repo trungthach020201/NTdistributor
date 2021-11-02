@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
     <link rel="stylesheet" href="css/font-awesome.min.css">
     <link rel="stylesheet" href="responsive.css">
-    <title>NTdisbutor</title>
+    <title>ATN shop</title>
 	<script src="js/jquery-3.2.0.min.js"></script>
     <script src="js/jquery.dataTables.min.js"></script>
     <script src="js/dataTables.bootstrap.min.js"></script>
@@ -38,7 +38,7 @@
 			$result = pg_query($conn,$sq) or die(pg_error($conn));
 			if(pg_num_rows($result)==0)
 			{
-				pg_query($conn,"INSERT INTO category(idcate,namecate,descate) VALUES ('$id','$name','$des')");
+				pg_query($conn,"INSERT INTO public.category(idcate,namecate,descate) VALUES ('$id','$name','$des')");
 				echo '<meta http-equiv="refresh" content="0;URL=?page=cate"/>';
 			}
 			else
