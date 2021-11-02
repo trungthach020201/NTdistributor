@@ -17,6 +17,20 @@
     <body>
     
 <br>  
+
+                <script language="javascript">
+                    function deleteConfirm()
+                    {
+                        if (confirm("Are you sure to delete"))
+                            {
+                                return true;
+                            }
+                        else{
+                                return false;
+                            }
+                    }
+                </script>
+
 <?php
             if (!isset($_SESSION['admin'])or $_SESSION['admin']==0)
             {
@@ -82,13 +96,13 @@
     }
     ?>
 
-    <?php 
-    } 
-    ?>
+ 
 </tbody>
 
 </table>
-
+<?php 
+    } 
+    ?>
 </form>
     </body>
 </html>
