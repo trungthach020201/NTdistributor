@@ -17,7 +17,15 @@
     <body>
     
 <br>  
-
+<?php
+            if (!isset($_SESSION['admin'])or $_SESSION['admin']==0)
+            {
+            echo "<script>alert('You are not adminstrator')</script>";
+            echo '<meta http-equiv="refresh" content="0;URL=?page=index"/>';
+            }
+            else
+            {
+            ?>
 <?php
     if (isset($_GET["function"]) == "delproduct") {
         if (isset($_GET["id"])) {
@@ -72,6 +80,10 @@
     <?php 
     $No++;
     }
+    ?>
+
+    <?php 
+    } 
     ?>
 </tbody>
 

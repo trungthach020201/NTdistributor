@@ -54,7 +54,7 @@
                 <img src="image/<?php echo $row['productimage']?>" width="150" height="150">
                 </div>
                 <h5><a><?php echo  $row['productname']?></a></h5>
-                <p><a>price: <?php echo  $row['price']?> VND/kg</a></p>
+                <p><a>price: <?php echo  $row['price']?> VND</a></p>
                 <button class="btn1 btn-primary" >Add to cart</button>
             </div>
                 <?php
@@ -70,7 +70,7 @@
             </div>
                            <?php
 						  include_once("connection.php");
-		  				   	$result = pg_query($conn, "SELECT * FROM public.product where idcate='V01'");
+		  				   	$result = pg_query($conn, "SELECT * FROM public.product where idcate='G001'");
 			
 			       	                if (!$result) { //add this check.
                                 die('Invalid query: ' . pg_error($conn));
@@ -86,7 +86,7 @@
                 <img src="image/<?php echo $row['productimage']?>" width="150" height="150">
                 </div>
                 <h5><a><?php echo  $row['productname']?></a></h5>
-                <p><a>price: <?php echo  $row['price']?> VND/kg</a></p>
+                <p><a>price: <?php echo  $row['price']?> VND</a></p>
                 <button class="btn1 btn-primary">Add to cart</button>
             </div>
           
@@ -106,7 +106,7 @@
             </div>
                            <?php
 						  include_once("connection.php");
-		  				   	$result = pg_query($conn, "SELECT * FROM public.product where idcate='T01'");
+		  				   	$result = pg_query($conn, "SELECT * FROM public.product where idcate='U001'");
 			
 			                if (!$result) { //add this check.
                                 die('Invalid query: ' . pg_error($conn));
@@ -121,7 +121,7 @@
                 <img src="image/<?php echo $row['productimage']?>" width="150" height="150">
                 </div>
                 <h5><a><?php echo  $row['productname']?></a></h5>
-                <p><a>price: <?php echo  $row['price']?>VND/kg</a></p>
+                <p><a>price: <?php echo  $row['price']?>VND</a></p>
                 <button class="btn1 btn-primary">Add to cart</button>
             </div>
                 <?php
