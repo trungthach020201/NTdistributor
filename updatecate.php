@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
     <link rel="stylesheet" href="css/font-awesome.min.css">
     <link rel="stylesheet" href="responsive.css">
-    <title>NTdisbutor</title>
+    <title>ATN shop</title>
     <script src="js/jquery-3.2.0.min.js"></script>
     <script src="js/jquery.dataTables.min.js"></script>
     <script src="js/dataTables.bootstrap.min.js"></script>
@@ -91,7 +91,7 @@
              $result =  pg_query($conn,$sq);
              if(pg_num_rows($result)==0)
              {
-                 pg_query($conn,"UPDATE category SET namecate = '$name', descate ='$des' WHERE idcate ='$id'");
+                 pg_query($conn,"UPDATE public.category SET namecate = '$name', descate ='$des' WHERE idcate ='$id'");
                  echo '<meta http-equiv="refresh" content ="0;URL=?page=cate"/>';
              }
              else

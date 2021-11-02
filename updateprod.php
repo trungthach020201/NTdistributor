@@ -143,7 +143,7 @@
 						copy($pic['tmp_name'], "image/".$pic['name']);
 						$filePic = $pic['name'];
 
-						$sqlstring="UPDATE product SET productname='$proname', price=$price, 
+						$sqlstring="UPDATE public.product SET productname='$proname', price=$price, 
 						productimage='$filePic',idcate='$category' WHERE productid='$id'";
 						pg_query($conn,$sqlstring);
 						echo '<meta http-equiv="refresh" content="0;URL=?page=cate"/>';
@@ -169,7 +169,7 @@
 				$result= pg_query($conn,$sq);
 				if(pg_num_rows($result)==0)
 				{
-					$sqlstring="UPDATE product SET productname='$proname',
+					$sqlstring="UPDATE public.product SET productname='$proname',
 					price=$price, idcate='$category' WHERE productid='$id'";
 
 					pg_query($conn,$sqlstring);
