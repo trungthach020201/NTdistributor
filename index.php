@@ -49,7 +49,7 @@
                </div>
                <div id="sear">
                     <li class="nav-item">
-                    <a class="nav-link" href="?page=fruit">Manage store</a>
+                    <a class="nav-link" href="?page=fruit">Manage Account</a>
                     </li>
                </div>
                <div id="sear">
@@ -69,7 +69,7 @@
                 </div>
                 <div id="sear">
                     <li class="nav-item">
-                    <a class="nav-link" href="?page=addtocart">Manage account</a>
+                    <a class="nav-link" href="?page=addtocart">Profit Report</a>
                     </li>
                </div>
         <div>
