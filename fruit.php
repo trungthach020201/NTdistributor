@@ -22,7 +22,7 @@
                         <div class="product-carousel"> 
                         <div class="normal-wrapper">
             <div class="category-1">
-                <h1 class="no-margin-top"><b>|</b> Fruits</h1>
+                <h1 class="no-margin-top"><b>|</b> Account off User</h1>
             </div>
                            <?php
 						  include_once("connection.php");
